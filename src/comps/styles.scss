@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "../styles//variables.scss";
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.logo{
+    width: 10rem !important;
+}
+.logo img{
+    width: auto;
+}
+.contact-btn{
+top: 32px;
+left: 1597px;
+width: 173px;
+height: 2.5em;
+background: $second-color 0% 0% no-repeat padding-box !important;
+border-radius: 6px;
+opacity: 1;
+border: none;
+}
+.contact-h{
+    color:rgb(238, 235, 235);
+    font-weight: 300;
+
+}
+
+.footer{
+ background-color: #0e3f3a;
+   padding: 1.5em;
+}
+
+.contact{
+    padding: 2em;
+    height: 60vh;
+    background-color: $second-color;
+}
+.req-card-header{
+    text-align: center;
+}
+.req-card-header p{
+    text-align: center;
+font: normal normal 300 18px/22px Roboto;
+letter-spacing: 0px;
+color: #f5f0f0;
+opacity: 1;
+}
+.updates-title{
+    text-align: center;
+}
+
+.data{
+    height: 50vh;
+    margin-top: -25vh;
+    margin-bottom: 2rem;
+}
+.data-row-1{
+    background-color: $second-color;
+    height: 25vh;
+    margin-left: 3rem;
+    margin-right: 3rem;
+   border-radius: 8px 8px 0px 0px;
+   text-align: center;
+}
+.data-row-1 h1{
+    text-align: center;
+
+letter-spacing: 0px;
+color: #2FC8B8;
+opacity: 1;
+font-size: 3em;
+padding-top: 20px !important;
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+.data-row-1 span{
+    color:rgb(247, 245, 245);
+
+}
+
+.data-row-2{
+    background-color: white;
+    height: 25vh;
+    box-shadow: 0px 3px 3px 3px rgb(245, 245, 245);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 0px 0px 8px 8px;
+}
+.data-col{
+text-align: center;
+}
+.data-col h1{
+    color: $first-color;
+    font-size: 1.5em;
+}
+.data-col span{
+    font-size: 1.1em;
+}
+.data-col h3{
+      font-size: 1.1em;
+      color: #d1cbcb;
+
+}
+
+.data-continents{
+    height: 100vh;
+}
+.col-continent{
+height: 50vh;
+display: flex;
+border-radius: 5%;
+width: 475px;
+margin-top: 5%;
+margin-bottom: 5%;
+color:rgb(255, 255, 255)
+}
+
+.col-1-continent{
+background: white;
+height: 45vh;
+box-shadow: 0px 3px 16px #0000001F;
+}
+.cont-name{
+    color:black
+}
+.col-2-continent{
+background-color: $first-color;
+height: 45vh;
+}
+.cont-num{
+text-align: center;
+letter-spacing: 0px;
+color: #2FC8B8;
+opacity: 1;
+font-size: 3em;
+padding-top: 20px !important;
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+.cases-total{
+      font-size: .7em;
+      color: #b3aeae;
+}
+.deaths-total{
+      font-size: .7em;
+   color: rgb(241, 241, 241);
+}
+
+.col-2-count{
+ color: rgb(247, 247, 247);
+font-size: 1.1em;   
+}
+.new-tit{
+    color:black;
+    font-size: small;
+}
