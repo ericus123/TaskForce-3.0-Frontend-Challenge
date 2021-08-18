@@ -1,72 +1,130 @@
-[![Coverage Status](https://coveralls.io/repos/github/ericus123/TaskForce-3.0-Frontend-Challenge/badge.svg?branch=main)](https://coveralls.io/github/ericus123/TaskForce-3.0-Frontend-Challenge?branch=main)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/564a2b40-366b-42be-a76a-fe4cb85f3916/deploy-status)](https://app.netlify.com/sites/covicalc/deploys) [![Build Status](https://app.travis-ci.com/ericus123/TaskForce-3.0-Frontend-Challenge.svg?branch=main)](https://app.travis-ci.com/ericus123/TaskForce-3.0-Frontend-Challenge) [![Coverage Status](https://coveralls.io/repos/github/ericus123/TaskForce-3.0-Frontend-Challenge/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/ericus123/TaskForce-3.0-Frontend-Challenge?branch=main&kill_cache=1)
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# COVICALC
 
-## Available Scripts
+A realtime Covid-19 data web application
 
-In the project directory, you can run:
+## Features
 
-### `yarn start`
+- Get real time Covid-19 data by country
+- Get real time Covid-19 data by continents
+- Get real time Covid-19 data by date
+- It includes vaccinations data
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
+## Tech Stack
+ `React`
+ `Redux`
+`Sass`
+`CSS3`
+`Axios`
+`Netlify`
+`Jest`
+`Yarn` 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+  
+## Environment Variables
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project, you will need to add the following environment variables to your .env file
 
-### `yarn build`
+`REACT_APP_BASE_URL`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It's the base url of the data API you are using 
+ex: `https://disease.sh`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
+## API Reference
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Here is the [link](https://disease.sh/docs/) for full API documentation 
+#### Get country data
 
-### `yarn eject`
+```http
+  GET /countries/country
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `country` | `string` | **Required**. It's the name of the country.|
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Get continents' data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```http
+  GET /continents}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `yesterday`      | `boolean` | **Optional**. Queries data reported a day ago |
+| `twoDaysAgo`      | `boolean` | **Optional**. Queries data reported two days ago |
+| `sort`      | `boolean` | **Optional**. Sorts the retur data by newest first 
+| `allowNull`| `boolean`| **Optional** By default, if a value is missing, it is returned as 0. This allows nulls to be returned|
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Run Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the project
 
-### Code Splitting
+```bash
+  git clone https://github.com/ericus123/TaskForce-3.0-Frontend-Challenge
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Go to the project directory
 
-### Analyzing the Bundle Size
+```bash
+  cd TaskForce-3.0-Frontend-Challenge
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install dependencies
 
-### Making a Progressive Web App
+```bash
+  yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Start the server
 
-### Advanced Configuration
+```bash
+  yarn run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  
+## Running Tests
 
-### Deployment
+To run tests, run the following command
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+ yarn run test
+```
 
-### `yarn build` fails to minify
+  
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This app is deployed on netlify
+
+  
+## Demo
+[https://covicalc.netlify.app/](https://covicalc.netlify.app/)
+
+
+  
+## Screenshots
+
+![App Screenshot](https://i2.paste.pics/567f42bffd9a9d3a84e26139f083e3f1.png)
+
+  
+## 🚀 About Me
+A full stack web developer focused on crafting great web experiences.
+
+  
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.amanieric.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amani-eric/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/amaniericus)
+
+  
+## Feedback
+
+If you have any feedback, please reach out to me at amaniericus@gmail.com
+
+  

@@ -49,8 +49,9 @@
       "<rootDir>/src/comps/RequestCard.js",
       "<rootDir>/src/comps/DataContinents.js",
       "<rootDir>/src/comps/CountrySelector.js",
-      "<rootDir>/src/Container.js",
-      "<rootDir>/src/comps/Data.js"
+       "<rootDir>/src/comps/Data.js",
+      "<rootDir>/src/Container.js"
+
     ]
   },
   "scripts": {
