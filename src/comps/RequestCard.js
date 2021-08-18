@@ -2,9 +2,9 @@ import React from "react";
 import {useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetCountryData, GetVaccineCountryData } from "../redux/actions";
-import {Row, Container, Col, Form, Button, Spinner} from "react-bootstrap";
+import {Row, Col, Form, Button, Spinner} from "react-bootstrap";
 import CountrySelector from "./CountrySelector";
-
+import "./styles.scss";
 
 
 const RequestCard =   () => {
@@ -31,23 +31,23 @@ const RequestCard =   () => {
         dispatch(GetVaccineCountryData(country.name,getDays(e.target.date.value)));
     };
     return (
-        <Container>
+        <div className="mb-5" style={{marginBottom: "50%"}}>
             <div className="justify-content-md-center req-card-header mt-4">
                 <h1 className="updates-title" style={{color:"white"}}>UPDATES</h1>
                 <p>Search a country</p>
             </div>
             
             <Form onSubmit={handleSubmit}>
-                <Row className="justify-content-center no-gutters">
-                    <Col  md="3" className="mr-0 px-0">
+                <Row  className="justify-content-center no-gutters m-2">
+                    <Col  sm="3" className="mr-0 px-1">
                        
-                        <CountrySelector disabled={countryDataIsLoading} handleChange={handleCountryChange}/>
+                        <CountrySelector  disabled={countryDataIsLoading} handleChange={handleCountryChange}/>
                     </Col>
-                    <Col  md="2" className="ml-0 px-0" style={{borderRadius:"0px", background:"white"}} >
-                        <input  disabled={countryDataIsLoading} required style={{border:"none", padding:"4px"}} type="date" name="date"/>
+                    <Col   sm="3" className="mr-0 px-1" style={{borderRadius:"0px", background:"white"}} >
+                        <input className="text-center form-control"  disabled={countryDataIsLoading} required style={{border:"none"}} type="date" name="date"/>
                    
-                    </Col>
-                    <Col md="1" className="ml-0 px-0" style={{borderRadius:"0px"}}>
+                    </Col> 
+                    <Col sm="1" className="mr-0 px-1" style={{borderRadius:"0px"}}>
                         <Button disabled={countryDataIsLoading} style={{background:"#1E776E"}} type="submit">
                             {countryDataIsLoading ? (
                                 <Spinner size="sm" animation="border"></Spinner>
@@ -59,7 +59,9 @@ const RequestCard =   () => {
                     
                 </Row>
             </Form>
-        </Container>
+            <br/>
+            <br/>
+        </div>
     );
 };
 export default RequestCard;

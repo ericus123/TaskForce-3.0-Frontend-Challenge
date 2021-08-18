@@ -4,7 +4,7 @@ import RequestCard from "./RequestCard";
 import "./styles.scss";
 const UpperPage = () => {
     return (
-        <div style={{backgroundColor:"yellow", width:"100% !important", height:"60vh"}}><Navigation/>
+        <div className="up-card" ><Navigation/>
             <RequestCard/>
         </div>
     );

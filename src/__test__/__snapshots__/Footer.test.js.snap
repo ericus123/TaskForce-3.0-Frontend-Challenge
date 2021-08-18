@@ -10,7 +10,7 @@ exports[`renders footer without crashing 1`] = `
   <Container
     fluid={false}
   >
-    <NavbarCollapse
+    <div
       className="justify-content-start"
       style={
         Object {
@@ -40,8 +40,8 @@ exports[`renders footer without crashing 1`] = `
       >
            AMANI Eric
       </a>
-    </NavbarCollapse>
-    <NavbarCollapse
+    </div>
+    <div
       className="justify-content-end"
       style={
         Object {
@@ -73,7 +73,7 @@ exports[`renders footer without crashing 1`] = `
          Awesomity Lab 
       </a>
        
-    </NavbarCollapse>
+    </div>
   </Container>
 </Navbar>
 `;
