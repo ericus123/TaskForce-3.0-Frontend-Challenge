@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable react/display-name */
 import { getData } from "country-list";
 import Select from "react-select";
 import ReactCountryFlag from "react-country-flag";
@@ -16,14 +17,14 @@ const CountrySelector = ({handleChange}) => {
         title={country.name}
     /> {country.name}</>);
     return (
-        <Select defaultValue={{ label: <ReactCountryFlag
+        <Select defaultValue={{ label:  <> <ReactCountryFlag
             countryCode="RW"
             svg
             style={{
                 width: "2em",
                 height: "2em",
             }}
-        />, code: "RW",value:"Rwanda" }} options={options} onChange = {(value) => handleChange(value)} />
+        /> Rwanda</>, code: "RW",value:"Rwanda" }} options={options} onChange = {(value) => handleChange(value)} />
     );
 
 };

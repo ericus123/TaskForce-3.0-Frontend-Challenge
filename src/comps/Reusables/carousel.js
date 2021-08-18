@@ -10,42 +10,30 @@ import "../styles.scss";
 
 const responsive = {
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
+        breakpoint: { max: 3000, min: 1026 },
         items: 2.6,
         slidesToSlide: 1.7 
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-        slidesToSlide: 2 
+        breakpoint: { max: 1025, min: 740 },
+        items: 1.5,
+        slidesToSlide: 1
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-        slidesToSlide: 1 
+        breakpoint: { max: 740, min: 0 },
+        items: 0.9,
+        slidesToSlide: 1
     }
 
 };
 const CarouselSlider = ({data}) => {
 
-    // const CustomRightArrow = ({ onClick}) => {
-    //     return <ArrowRightShort className="react-multiple-carousel__arrow" style={{  fontWeight:"200 !important", fontSize:"50px", background:"#1E776E", color:"white", padding:"5px"}} onClick={() => onClick()}/>;
-    // };
-    
-    // const CustomLeftArrow = ({ onClick}) => {
-    //     return <ArrowLeftShort className="react-multiple-carousel__arrow" style={{ marginLeft:"40px",fontWeight:"200 !important", fontSize:"50px", background:"#1E776E", color:"white", padding:"5px"}} onClick={() => onClick()}/>;
-    // };
-
-
     return  <Carousel
-        // CustomLeftArrow ={< CustomLeftArrow />}
-        // customRightArrow={<CustomRightArrow />} 
-      
         swipeable={false}
         draggable={false}
         showDots={false}
         responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
+        ssr={true}
         infinite={true}
         autoPlay={true}
         autoPlaySpeed={3000} 
@@ -53,7 +41,6 @@ const CarouselSlider = ({data}) => {
         customTransition="all 1"
         transitionDuration={1000}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
         itemClass="carousel-item-padding-40-px"
     >
         {

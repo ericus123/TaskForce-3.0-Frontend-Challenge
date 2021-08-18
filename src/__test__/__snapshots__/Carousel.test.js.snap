@@ -18,12 +18,6 @@ exports[`renders carousel without crashing 1`] = `
   keyBoardControl={true}
   minimumTouchDrag={80}
   pauseOnHover={true}
-  removeArrowOnDeviceType={
-    Array [
-      "tablet",
-      "mobile",
-    ]
-  }
   renderArrowsWhenDisabled={false}
   renderButtonGroupOutside={false}
   renderDotsOutside={false}
@@ -32,26 +26,26 @@ exports[`renders carousel without crashing 1`] = `
       "desktop": Object {
         "breakpoint": Object {
           "max": 3000,
-          "min": 1024,
+          "min": 1026,
         },
         "items": 2.6,
         "slidesToSlide": 1.7,
       },
       "mobile": Object {
         "breakpoint": Object {
-          "max": 464,
+          "max": 740,
           "min": 0,
         },
-        "items": 1,
+        "items": 0.9,
         "slidesToSlide": 1,
       },
       "tablet": Object {
         "breakpoint": Object {
-          "max": 1024,
-          "min": 464,
+          "max": 1025,
+          "min": 740,
         },
-        "items": 2,
-        "slidesToSlide": 2,
+        "items": 1.5,
+        "slidesToSlide": 1,
       },
     }
   }
