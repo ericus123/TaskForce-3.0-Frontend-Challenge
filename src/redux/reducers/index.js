@@ -6,4 +6,5 @@ const allReducers = combineReducers({
     CovidDataReducer
 });
 
+
 export default allReducers;

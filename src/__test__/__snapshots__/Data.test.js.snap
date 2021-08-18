@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders country data without crashing 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "@@observable": [Function],
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Data
+    countryData={
+      Object {
+        "active": 36006,
+        "activePerOneMillion": 2704.16,
+        "cases": 82215,
+        "casesPerOneMillion": 6175,
+        "continent": "Africa",
+        "country": "Rwanda",
+        "countryInfo": Object {
+          "_id": 646,
+          "flag": "https://disease.sh/assets/img/flags/rw.png",
+          "iso2": "RW",
+          "iso3": "RWA",
+          "lat": -2,
+          "long": 30,
+        },
+        "critical": 43,
+        "criticalPerOneMillion": 3.23,
+        "deaths": 1005,
+        "deathsPerOneMillion": 75,
+        "oneCasePerPeople": 162,
+        "oneDeathPerPeople": 13249,
+        "oneTestPerPeople": 6,
+        "population": 13315025,
+        "recovered": 45204,
+        "recoveredPerOneMillion": 3394.96,
+        "tests": 2285145,
+        "testsPerOneMillion": 171622,
+        "todayCases": 0,
+        "todayDeaths": 0,
+        "todayRecovered": 0,
+        "updated": 1629566946482,
+      }
+    }
+    vaccineCountryData={
+      Object {
+        "country": "Rwanda",
+        "timeline": Array [
+          Object {
+            "daily": 0,
+            "dailyPerMillion": 0,
+            "date": "8/21/21",
+            "total": 1344627,
+            "totalPerHundred": 0,
+          },
+        ],
+      }
+    }
+  />
+</ContextProvider>
+`;

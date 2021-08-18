@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux";
+/* eslint-disable react/prop-types */
+import React from "react";
 import {Row, Container, Col} from "react-bootstrap";
 import { formatNumber } from "../helpers";
 import "./styles.scss";
-const Data = () => {
-    const  countryData = useSelector((state) => state.CovidDataReducer.countryData);
-    const  vaccineCountryData = useSelector((state) => state.CovidDataReducer.vaccineCountryData);
+const Data = ({countryData,vaccineCountryData}) => {
+
     return (
         <Container className="data">
 

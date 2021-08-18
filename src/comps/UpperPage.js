@@ -1,3 +1,4 @@
+import React from "react";
 import Navigation from "./Navbar";
 import RequestCard from "./RequestCard";
 import "./styles.scss";

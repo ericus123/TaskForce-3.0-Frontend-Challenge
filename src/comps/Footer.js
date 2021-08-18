@@ -1,3 +1,4 @@
+import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import "./styles.scss";
 

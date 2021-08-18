@@ -2,7 +2,9 @@
   "name": "challenge-v3",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@babel/preset-react": "^7.14.5",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,7 +13,12 @@
     "bootstrap": "^5.1.0",
     "country-flag-icons": "^1.4.5",
     "country-list": "^2.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-15": "^1.4.3",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "eslint-plugin-react": "^7.24.0",
+    "jest-config": "^27.0.6",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
@@ -24,15 +31,34 @@
     "react-scripts": "4.0.3",
     "react-select": "^4.3.1",
     "react-select-country-list": "^2.2.3",
+    "react-test-renderer": "^17.0.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "sass": "^1.38.0",
     "web-vitals": "^1.0.1"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass|svg|jpg|png|jpeg)$": "identity-obj-proxy"
+    },
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/redux",
+      "<rootDir>/src/comps/RequestCard.js",
+      "<rootDir>/src/comps/DataContinents.js",
+      "<rootDir>/src/comps/CountrySelector.js",
+      "<rootDir>/src/Container.js",
+      "<rootDir>/src/comps/Data.js"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "test:coverage": "jest --coverage && coveralls < coverage/lcov.info",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -52,5 +78,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "coveralls": "^3.1.1"
   }
 }

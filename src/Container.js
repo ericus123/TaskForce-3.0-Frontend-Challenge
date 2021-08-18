@@ -6,17 +6,21 @@ import Footer from "./comps/Footer";
 import Navigation from "./comps/Navbar";
 import ProfileCard from "./comps/ProfileCard";
 import RequestCard from "./comps/RequestCard";
+import { useSelector } from "react-redux";
+
 import "./styles/index.scss";
 
 
 const Container = () => {
+    const  countryData = useSelector((state) => state.CovidDataReducer.countryData);
+    const  vaccineCountryData = useSelector((state) => state.CovidDataReducer.vaccineCountryData);
     return (
         <div className="">
             <div className="upper-page">
                 <Navigation/>
                 <RequestCard/>
             </div>
-            <Data/>
+            <Data countryData={countryData} vaccineCountryData={vaccineCountryData}/>
             <DataContinent/>
             <ProfileCard/>
             <Contact/>
