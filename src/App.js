@@ -1,9 +1,11 @@
-import "./App.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "./Container";
+import "./styles/index.scss";
 function App() {
     return (
-        
-        <div>HELLO</div>
+        <div className="app">
+            <Container/>
+        </div>
     );
 }
 
